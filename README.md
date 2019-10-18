@@ -1,8 +1,12 @@
-## Welcome to GitHub Pages
+## Welcome to Vocabulary Driven Database Pages
 
-You can use the [editor on GitHub](https://github.com/edouardkombo/vdd-pattern/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+VDD at the difference of Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured databases only starting from a user as "me".
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+VDD vocabularies cover entities, relationships between entities and actions, and can easily be extended through a well-documented extension model.
+
+Founded by Edouard Kombo, VDD vocabularies are developed by an open community process through GitHub.
+
+A shared vocabulary makes it easier for webmasters and developers to decide on a schema and get the maximum benefit for their efforts. It is in this spirit that the founders, together with the larger community have come together - to provide a shared collection of schemas.
 
 ### Markdown
 
