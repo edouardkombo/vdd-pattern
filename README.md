@@ -1,16 +1,23 @@
 ## Welcome to Vocabulary Driven Database Pages
 
-VDD at the difference of Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured databases only starting from a user as "me".
+VDD is a collaborative community with a mission to create, maintain and promote schemas for structured databases.
 
 VDD vocabularies cover entities, relationships between entities and actions, and can easily be extended through a well-documented extension model.
 
-Founded by Edouard Kombo, VDD vocabularies are developed by an open community process through GitHub.
+A shared vocabulary makes it easier for developers and architects to decide on a schema and get the maximum benefit for their efforts.
 
-A shared vocabulary makes it easier for webmasters and developers to decide on a schema and get the maximum benefit for their efforts. It is in this spirit that the founders, together with the larger community have come together - to provide a shared collection of schemas.
+Founded by Edouard Kombo, VDD vocabularies are developed by an open community process through GitHub, feel free to join the community.
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Understand the VDD pattern
+
+The philosophy behind VDD resides in 4 principles that claim that a user:
+- is always a representation of "me"
+- is nothing more than a single identifier 
+- owns reusable attributes through relations
+- can live without attributes but not a single identifier
+
+
 
 ```markdown
 Syntax highlighted code block
