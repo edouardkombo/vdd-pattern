@@ -14,11 +14,17 @@ Founded by Edouard Kombo, the VDD pattern aims to be supported by a collaborativ
 Everything starts from a user perspective. The "Me" paradigm's philosophy is to make this perspective very personal, by replacing "user" or any other term defining a user,  by "me".
 
 
-### The two Laws of VDD Pattern
+### The laws of VDD Pattern
 
 Me:
 - is a table (entity) containing only an identifier (id)
 - has xToMany relations with other entities following Single Responsibility pattern
+
+When columns of a same table contains oneToMany relation with the table, this column has to become a dedicated table.
+
+When a table has strict oneToOne relation with its columns, the columns become separate tables if these conditions are met:
+- Values of the columns repeat themselves in the table
+- Values are too big that they may impact I/O
     
 
 ### Getting started
