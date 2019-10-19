@@ -1,18 +1,20 @@
-## Welcome to Vocabulary Driven Database Pages
+## Welcome to Vocabulary Driven Database Pattern
 
-Founded by Edouard Kombo, VDD pattern is a collaborative community with the mission to create, maintain and promote schemas for structured databases following DRY principle. VDD vocabularies cover entities, relationships between entities and actions, and can easily be extended through a well-documented extension model.
+Founded by Edouard Kombo, VDD pattern or "Me paradigm" is a collaborative community with the mission to create, maintain and promote schemas for structured databases following DRY principle, and starting exclusively from a user perspective. 
+
+VDD vocabularies cover entities, relationships between entities and actions, and can easily be extended through a well-documented extension model.
 
 A shared vocabulary makes it easier for developers and architects to decide on a schema and get the maximum benefit for their efforts.
 
 
 ### Understand the pattern
 
-VDD's philosophy starts from a "user" who:
+VDD's philosophy or "me paradigm" starts from a "user" perspective who:
 - is always a representation of "me"
     - "me" is only an identifier (id)
-    - "me" can not exist without an identifier (id)
-    - "me" only owns oneToMany relations to multiple attributes called entities
+    - "me" can not exist without an identifier (id), but
     - "me" can exist without relations
+    - "me" has oneToMany relations to multiple attributes called entities
 - does not repeat himself (DRY)
     
 
@@ -21,28 +23,28 @@ VDD's philosophy starts from a "user" who:
 Let's design a simple user system with those attributes: password, gender, skills, firstname, lastname, email. date of birth, phone number, address, country.
 
 ```
-We create the table "me" containing only one column: "id"
+# We create the table "me" containing only one column: "id"
+
+# We use the wonderful sharedapi.org for common entities like countries, cities, towns, regions, skills, genders (DO NOT REPEAT YOURSELF, DO NOT REINVENT THE WHEEL)
 
 We then create oneToMany relations to these tables
-- secret                # to store the password because other entities can be password protected too, not only "me" (DRY)
-- country               # Me can be linked to multiple countries. Contains "code, name, phone prefix"
+- secret                # Me can protect anything with a password, just like his relations (DRY)
 - gender                # Me can change gender whenever he wants
-    - gender_type       # Gender is expected to be a human, but can also be an animal (oneToMany relation with gender)
 - skill                 # Me can change skill whenever he wants
-    - skill_type        # Skills must be grouped by type  (oneToMany relation with skill)
-- civility              # Contains firstname, lastname and date of birth related to Me
+- civility              # Me posseses a civility, firstname, lastname and date of birth
 - email                 # Me can have multiple email addresses, as some of his relations
+- ownership             # Me has an ownership status with some relations ("owner, tenant, visitor etc")
 - phone                 # Me can have multiple phone numbers, as some of his relations
     - phone_country     # A phone number is attached to one country
 - address               # Me can have multiple addresses, as some of his relations. Contains "street and number"
     - address_country   # An address is attached to a country
-    - address_town      # An address is linked to a town
-    - address_ownership # An address is linked to Me through an ownership ("owner, tenant, visitor etc")
-- town                  # Me can be linked to multiple towns, as some of his relations
-- zipcode               # Me can have multiple phone numbers, but also some of his relations
-    - address_zipcode   # A phone number can be attached to one country
-- relation              # Me can have multiple phone numbers, but also some of his relations
-    - relation_type     # A phone number can be attached to one country
+    - address_city      # An address is attached to a city
+    - address_region    # An address is attached to a region    
+    - address_zipcode   # An address is attached to a zipcode
+    - address_ownership # An address is attached to Me through an ownership
+- follow                # Me can follow other "Me"s or relations    
+- relationship          # Me can be related to other "Me"s
+    - relationship_type # "friend, mother, uncle, sister, etc"
 
 **user** has oneToMany relation with **secret**
 **user** has oneToMany relation with **secret**
