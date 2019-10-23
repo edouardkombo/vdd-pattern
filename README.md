@@ -90,6 +90,10 @@ Then we create xToMany relations to these Single Responsibility tables
     - blocked_reason    # Self explaining      
 ```
 
+## Credits
+
+Created by [Edouard Kombo](https://medium.com/@edouard.kombo). 
+
 
 ### Support or Contact
 
