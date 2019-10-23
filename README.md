@@ -14,18 +14,16 @@ Founded by Edouard Kombo, the VDD pattern aims to be supported by a collaborativ
 Everything starts from a user perspective. The "Me" paradigm's philosophy is to make this perspective very personal, by replacing "user" or any other term defining a user,  by "me".
 
 
-### The laws of VDD Pattern
+### The laws of Vocabulary Driven Database Pattern
 
 Me:
 - is a table (entity) containing only an identifier (id)
 - has xToMany relations with other entities following Single Responsibility pattern
 
-When columns of a same table contains oneToMany relation with the table, this column has to become a dedicated table.
+When to create dedicated tables:
+- when columns have xToMany relationships with the parent table
+- if a column has oneToOne relation with the parent table, define your own rule based on filling percentage (columns with data / columns without data)
 
-When a table has strict oneToOne relation with its columns, the columns become separate tables if these conditions are met:
-- Values of the columns repeat themselves in the table
-- Values are too big that they may impact I/O
-    
 
 ### Getting started
 
@@ -90,34 +88,9 @@ Then we create xToMany relations to these Single Responsibility tables
 - blocked               # Me can be put in jail for a specific period
     - blocked_type      # Me and Other relations only (like: "message")
     - blocked_reason    # Self explaining      
-
-
 ```
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/edouardkombo/vdd-pattern/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Feel free to contribute to this project, for any support please contact me at edouard.kombo@gmail.com and I will be more than likely to help you.
